@@ -1,11 +1,11 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 interface WishlistState {
-  ids: string[];
+  bookIds: string[];
 }
 
 const initialState: WishlistState = {
-  ids: [],
+  bookIds: [],
 };
 
 const wishlistSlice = createSlice({
@@ -13,15 +13,13 @@ const wishlistSlice = createSlice({
   initialState,
   reducers: {
     toggleWishlist(state, action: PayloadAction<string>) {
-      if (state.ids.includes(action.payload)) {
-        state.ids = state.ids.filter((id) => id !== action.payload);
-      } else {
-        state.ids.push(action.payload);
-      }
+      const id = action.payload;
+      state.bookIds = state.bookIds.includes(id)
+        ? state.bookIds.filter((bookId) => bookId !== id)
+        : [...state.bookIds, id];
     },
   },
 });
 
 export const { toggleWishlist } = wishlistSlice.actions;
-
 export default wishlistSlice.reducer;
