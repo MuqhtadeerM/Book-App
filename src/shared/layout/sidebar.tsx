@@ -15,7 +15,7 @@ export function Sidebar() {
       <div className="flex h-full w-full flex-col p-6">
         <Link href="/" className="mb-10 flex items-center gap-2">
           <Image
-            src="/images/logo.svg"
+            src="/images/logo.png"
             alt=""
             width={28}
             height={28}

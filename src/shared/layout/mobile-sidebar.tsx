@@ -7,7 +7,7 @@ import { Sheet, SheetContent } from "@/shared/ui/sheet";
 import { navigation } from "@/shared/config/navigation";
 
 import { useAppDispatch, useAppSelector } from "@/store/hooks";
-import { setSidebar } from "@/store/slices/uiSlice";
+import { setSidebar } from "@/store/ui/uiSlice";
 
 export function MobileSidebar() {
   const open = useAppSelector((state) => state.ui.sidebarOpen);
