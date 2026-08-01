@@ -1,8 +1,7 @@
 "use client";
 
 import { Sidebar } from "./sidebar";
-import { Topbar } from "./topbar";
-import { MobileSidebar } from "./mobile-sidebar";
+import { Header } from "@/shared/header";
 
 interface AppShellProps {
   children: React.ReactNode;
@@ -10,18 +9,14 @@ interface AppShellProps {
 
 export function AppShell({ children }: AppShellProps) {
   return (
-    <>
-      <MobileSidebar />
+    <div className="min-h-screen bg-[#FFFDF6]">
+      <Sidebar />
 
-      <div className="flex min-h-screen">
-        <Sidebar />
+      <main className="ml-[326px] mr-[43px]">
+        <Header />
 
-        <div className="flex flex-1 flex-col">
-          <Topbar />
-
-          <main className="flex-1 p-6 lg:p-10">{children}</main>
-        </div>
-      </div>
-    </>
+        <div className="pt-[42px]">{children}</div>
+      </main>
+    </div>
   );
 }

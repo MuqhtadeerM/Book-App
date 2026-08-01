@@ -1,17 +1,9 @@
-import { HeroBanner } from "@/features/browse/components/HeroBanner";
-import { GenreCarousel } from "@/features/browse/components/GenreCarousel";
-import { NewArrivalsSection } from "@/features/browse/components/NewArrivalsSection";
-import { RecommendedCarousel } from "@/features/browse/components/RecommendedCarousel";
-import { BestSellersSection } from "@/features/browse/components/BestSellersSection";
+import HeroBanner from "./components/HeroBanner";
 
-export function BrowsePage() {
+export default function BrowsePage() {
   return (
-    <div>
+    <div className="space-y-10">
       <HeroBanner />
-      <GenreCarousel />
-      <NewArrivalsSection />
-      <RecommendedCarousel />
-      <BestSellersSection />
     </div>
   );
 }

@@ -7,7 +7,7 @@ import { Input } from "@/shared/ui/input";
 import { useAppSelector } from "@/store/hooks";
 
 export function SettingsForm() {
-  const user = useAppSelector((state) => state.auth.user);
+  const user = useAppSelector((state) => state?.auth?.user);
   const [name, setName] = useState(user?.name ?? "");
   const [email, setEmail] = useState(user?.email ?? "");
   const [saved, setSaved] = useState(false);
