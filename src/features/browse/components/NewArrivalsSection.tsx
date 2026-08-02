@@ -1,31 +1,26 @@
 "use client";
 
-import { useNewArrivals } from "@/features/browse/hooks/useNewArrivals";
-import { CarouselPanel } from "@/features/browse/components/CarouselPanel";
-import { BookCard } from "@/features/book/components/BookCard";
+import BookCoverCard from "./BookCoverCard";
+import { newArrivals } from "./new-arrivals";
 
-export function NewArrivalsSection() {
-  const { data: books, isLoading } = useNewArrivals();
-
-  if (isLoading) {
-    return (
-      <CarouselPanel
-        title="New Arrivals"
-        isEmpty
-        emptyMessage="Loading new arrivals..."
-      />
-    );
-  }
-
+export default function NewArrivalsSection() {
   return (
-    <CarouselPanel
-      title="New Arrivals"
-      isEmpty={books.length === 0}
-      emptyMessage="No new arrivals yet — check back soon."
-    >
-      {books.map((book) => (
-        <BookCard key={book.id} book={book} />
-      ))}
-    </CarouselPanel>
+    <section className="w-full max-w-[997px]">
+      <div>
+        <h2 className="text-[28px] font-semibold leading-[36px] text-[#2F2F2F]">
+          New Arrivals
+        </h2>
+
+        <p className="mt-1 text-[16px] text-[#777]">
+          Trending books among readers
+        </p>
+      </div>
+
+      <div className="mt-8 flex gap-[27px]">
+        {newArrivals.map((book) => (
+          <BookCoverCard key={book.id} {...book} />
+        ))}
+      </div>
+    </section>
   );
 }

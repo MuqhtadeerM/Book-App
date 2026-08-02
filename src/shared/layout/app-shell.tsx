@@ -9,14 +9,18 @@ interface AppShellProps {
 
 export function AppShell({ children }: AppShellProps) {
   return (
-    <div className="min-h-screen bg-[#FFFDF6]">
-      <Sidebar />
+    <div className="min-h-screen bg-[#FFFDF6] overflow-x-hidden">
+      <div className="flex items-start gap-[30px] px-[30px] pt-[30px]">
+        {/* Sidebar */}
+        <Sidebar />
 
-      <main className="ml-[326px] mr-[43px]">
-        <Header />
+        {/* Main */}
+        <main className="flex-1 min-w-0 pb-[80px]">
+          <Header />
 
-        <div className="pt-[42px]">{children}</div>
-      </main>
+          <div className="mt-[28px]">{children}</div>
+        </main>
+      </div>
     </div>
   );
 }

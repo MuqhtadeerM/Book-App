@@ -1,22 +1,59 @@
 import {
-  BookOpen,
-  Compass,
-  Heart,
-  Home,
-  Library,
-  Search,
-  ShoppingCart,
+  Globe2,
+  Star,
+  Crown,
+  BadgeHelp,
+  BriefcaseBusiness,
+  Monitor,
+  Smile,
+  ScrollText,
+  Settings,
 } from "lucide-react";
 
 export const navigation = [
-  { title: "Home", href: "/", icon: Home },
-  { title: "Browse", href: "/browse", icon: Compass },
-  { title: "Library", href: "/library", icon: Library },
-  { title: "Wishlist", href: "/wishlist", icon: Heart },
-  { title: "Cart", href: "/cart", icon: ShoppingCart },
-];
-
-export const secondaryNavigation = [
-  { title: "Search", href: "/search", icon: Search },
-  { title: "Reading", href: "/reading", icon: BookOpen },
-];
+  {
+    title: "Browse",
+    href: "/browse",
+    icon: Globe2,
+  },
+  {
+    title: "New Arrivals",
+    href: "/new-arrivals",
+    icon: Star,
+  },
+  {
+    title: "Best Sellers",
+    href: "/best-sellers",
+    icon: Crown,
+  },
+  {
+    title: "Self help",
+    href: "/self-help",
+    icon: BadgeHelp,
+  },
+  {
+    title: "Business",
+    href: "/business",
+    icon: BriefcaseBusiness,
+  },
+  {
+    title: "Tech",
+    href: "/tech",
+    icon: Monitor,
+  },
+  {
+    title: "Kids",
+    href: "/kids",
+    icon: Smile,
+  },
+  {
+    title: "Classics",
+    href: "/classics",
+    icon: ScrollText,
+  },
+  {
+    title: "Settings",
+    href: "/settings",
+    icon: Settings,
+  },
+] as const;

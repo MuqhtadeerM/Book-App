@@ -1,9 +1,26 @@
+import Container from "@/shared/components/Container";
+
 import HeroBanner from "./components/HeroBanner";
+import GenreSection from "./components/GenreSection";
+import NewArrivalsSection from "./components/NewArrivalsSection";
 
 export default function BrowsePage() {
   return (
-    <div className="space-y-10">
+    <Container
+      className="
+        flex
+        w-full
+        max-w-[997px]
+        flex-col
+        gap-[56px]
+        pb-24
+      "
+    >
       <HeroBanner />
-    </div>
+
+      <GenreSection />
+
+      <NewArrivalsSection />
+    </Container>
   );
 }
