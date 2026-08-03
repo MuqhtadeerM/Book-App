@@ -5,7 +5,7 @@ import { newArrivals } from "./new-arrivals";
 
 export default function NewArrivalsSection() {
   return (
-    <section className="w-full max-w-[997px]">
+    <section className="w-full max-w-[2000px]">
       <div>
         <h2 className="text-[28px] font-semibold leading-[36px] text-[#2F2F2F]">
           New Arrivals

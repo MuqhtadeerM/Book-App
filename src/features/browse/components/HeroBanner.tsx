@@ -11,7 +11,7 @@ export default function HeroBanner() {
       initial={{ opacity: 0, y: 15 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.35 }}
-      className="relative h-[237px]  w-full max-w-[2000px] rounded-[12px] border border-[#E7E3D7] bg-white overflow-hidden top-[10px]"
+      className="relative h-[237px]  w-full max-w-[2000px] rounded-[12px] border border-[#E7E3D7] bg-white overflow-visible top-[20px]"
     >
       {/* Left Content */}
       <div className="absolute left-[42px] top-[34px]">
@@ -40,23 +40,23 @@ export default function HeroBanner() {
         width={252}
         height={258}
         priority
-        className="absolute right-[52px] top-[-8px] h-[258px] w-[252px] object-contain select-none pointer-events-none"
+        className="absolute right-[10px] top-[10px] h-[58px] w-[340px] object-contain select-none pointer-events-none"
       />
 
       {/* Book */}
       <motion.div
         whileHover={{ rotate: -22, y: -3, scale: 1.02 }}
         transition={{ duration: 0.25 }}
-        className="absolute right-[88px] top-[-6px] z-20"
+        className="absolute right-[18px] top-[-30px] z-20 w-[300px]"
         style={{ transform: "rotate(-25.36deg)" }}
       >
         <Image
           src="/images/hero-book.png"
           alt="Hero Book"
-          width={169}
-          height={244}
+          width={269}
+          height={544}
           priority
-          className="h-[244px] w-[169px] object-contain drop-shadow-[0_22px_30px_rgba(0,0,0,.18)]"
+          className="h-[244px] w-[269px] object-contain drop-shadow-[0_22px_30px_rgba(0,0,0,.18)]"
         />
       </motion.div>
     </motion.section>

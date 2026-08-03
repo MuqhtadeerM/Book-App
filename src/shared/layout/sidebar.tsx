@@ -13,15 +13,15 @@ export function Sidebar() {
 
   return (
     <aside className="hidden md:block w-[256px] shrink-0">
-      <div className="w-[256px] h-[538px] rounded-[16px] border border-[#EFE8D2] bg-[#FFF8E8] shadow-[0_8px_30px_rgba(0,0,0,0.04)]">
+      <div className="w-[256px] h-[558px] rounded-[16px] border border-[#EFE8D2] bg-[#FFF8E8] shadow-[0_8px_30px_rgba(0,0,0,0.04)]">
         {/* ================= Logo ================= */}
-        <div className="flex items-center h-[39px] w-[195px] ml-[27px] mt-[24px]">
+        <div className="flex items-center h-[39px] w-[195px] ml-[30px] mt-[25px]">
           <Link href="/browse" className="flex items-center">
             <Image
               src="/images/logo.png"
               alt="Chai Reader"
-              width={130}
-              height={26}
+              width={200}
+              height={36}
               priority
               className="object-contain"
             />
