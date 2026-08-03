@@ -10,7 +10,7 @@ export default function BrowsePage() {
       className="
         flex
         w-full
-        max-w-[997px]
+        max-w-[2097px]
         flex-col
         gap-[56px]
         pb-24

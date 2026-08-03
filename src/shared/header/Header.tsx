@@ -39,7 +39,7 @@ export function Header() {
           h-[47px]
           w-full
           max-w-[818px]
-          left-[60px]
+          left-[10px]
         "
       >
         <Search
