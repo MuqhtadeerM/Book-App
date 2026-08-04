@@ -7,6 +7,8 @@ import RecommendationSection from "./components/Recommendation/RecommendationSec
 import BestSellerSection from "./components/BestSellers/BestSellersSection";
 import CrimeFictionSection from "./components/Crime/Crimefictionsection";
 import NonFictionSection from "./components/NonFiction/Nonfictionsection";
+import AcademicsSection from "./components/Acadamics/Academicssection";
+import BusinessSection from "./components/Business/Businesssection";
 
 export default function BrowsePage() {
   return (
@@ -30,9 +32,16 @@ export default function BrowsePage() {
 
       <BestSellerSection />
 
+      {/* Speak with author */}
       <CrimeFictionSection />
 
       <NonFictionSection />
+
+      {/* famous authors */}
+
+      <AcademicsSection />
+
+      <BusinessSection />
     </Container>
   );
 }
