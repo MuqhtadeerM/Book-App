@@ -13,7 +13,7 @@ interface BookCardProps {
 
 // Exact measurements pulled from Figma
 const CARD_WIDTH = 191.0792999267578;
-const CARD_HEIGHT = 353.87884521484375;
+const CARD_HEIGHT = 359.87884521484375;
 
 const IMAGE_WIDTH = 168.1497802734375;
 const IMAGE_HEIGHT = 249.1674041748047;
@@ -27,7 +27,7 @@ export default function BookCard({
 }: BookCardProps) {
   return (
     <div
-      className="flex shrink-0 flex-col items-center snap-start"
+      className="flex shrink-0 flex-col items-center snap-start  bg-[#EAEAE6] "
       style={{ width: CARD_WIDTH, height: CARD_HEIGHT }}
     >
       {/* Cover */}
@@ -44,7 +44,7 @@ export default function BookCard({
           src={book.coverImageUrl}
           alt={book.title}
           fill
-          sizes="169px"
+          sizes="168px"
           className="object-cover"
         />
 

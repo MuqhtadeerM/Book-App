@@ -1,5 +1,6 @@
 "use client";
 
+import { Footer } from "../footer";
 import { Sidebar } from "./sidebar";
 import { Header } from "@/shared/header";
 
@@ -18,9 +19,10 @@ export function AppShell({ children }: AppShellProps) {
         <main className="flex-1 min-w-0 pb-[80px]">
           <Header />
 
-          <div className="mt-[28px]">{children}</div>
+          <div className="mt-[30px]">{children}</div>
         </main>
       </div>
+      <Footer />
     </div>
   );
 }
