@@ -26,7 +26,7 @@ export default function GenreSection() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: index * 0.06 }}
             whileHover={{ y: -3, scale: 1.03 }}
-            className="relative h-[61px] w-[184px] overflow-hidden rounded-full"
+            className="relative h-[60px] w-[184px] overflow-hidden rounded-full"
           >
             <Image
               src={genre.image}

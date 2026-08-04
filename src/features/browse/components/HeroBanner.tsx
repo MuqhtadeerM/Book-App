@@ -11,7 +11,7 @@ export default function HeroBanner() {
       initial={{ opacity: 0, y: 15 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.35 }}
-      className="relative h-[237px]  w-full max-w-[2000px] rounded-[12px] border border-[#E7E3D7] bg-white overflow-visible top-[20px]"
+      className="relative h-[250px]  w-full max-w-[2000px] rounded-[12px] border border-[#E7E3D7] bg-white overflow-visible top-[20px]"
     >
       {/* Left Content */}
       <div className="absolute left-[42px] top-[34px]">
