@@ -13,7 +13,7 @@ const authorPairings: AuthorBookPairing[] = [
     authorImageUrl: "/authors/shakespeare.png",
     bookTitle: "The Adventures of Tom Sawyer",
     bookAuthorLabel: "by Mark Twain",
-    bookCoverImageUrl: "/covers/tom-sawyer.png",
+    bookCoverImageUrl: "/art/tom-sawyer.png",
   },
   {
     id: "sa-2",
@@ -21,7 +21,7 @@ const authorPairings: AuthorBookPairing[] = [
     authorImageUrl: "/authors/sun-tzu.png",
     bookTitle: "The Art of War",
     bookAuthorLabel: "by Sun Tzu",
-    bookCoverImageUrl: "/covers/art-of-war.png",
+    bookCoverImageUrl: "/art/art-of-war.png",
   },
   {
     id: "sa-3",
@@ -29,7 +29,7 @@ const authorPairings: AuthorBookPairing[] = [
     authorImageUrl: "/authors/thiruvalluvar.png",
     bookTitle: "Thirukkural",
     bookAuthorLabel: "by Thiruvalluvar",
-    bookCoverImageUrl: "/covers/thirukkural.png",
+    bookCoverImageUrl: "/art/thirukkural.png",
   },
   {
     id: "sa-3",
@@ -37,7 +37,7 @@ const authorPairings: AuthorBookPairing[] = [
     authorImageUrl: "/authors/thiruvalluvar.png",
     bookTitle: "Thirukkural",
     bookAuthorLabel: "by Thiruvalluvar",
-    bookCoverImageUrl: "/covers/thirukkural.png",
+    bookCoverImageUrl: "/art/thirukkural.png",
   },
 ];
 
