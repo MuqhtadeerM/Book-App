@@ -1,5 +1,5 @@
 export const CAROUSEL = {
-  buttonSize: 72.58,
+  buttonSize: 40.07,
 
-  defaultCardWidth: 191,
+  defaultCardWidth: 191.08,
 };

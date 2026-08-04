@@ -2,6 +2,8 @@
 
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
+import { CAROUSEL } from "./Carousel.styles";
+
 interface Props {
   direction: "prev" | "next";
 
@@ -14,14 +16,16 @@ export default function CarouselButton({ direction, onClick }: Props) {
   return (
     <button
       onClick={onClick}
+      style={{
+        width: CAROUSEL.buttonSize,
+        height: CAROUSEL.buttonSize,
+      }}
       className="
         flex
-        h-[72px]
-        w-[72px]
         items-center
         justify-center
         rounded-full
-        border
+        border-[0.85px]
         border-[#E8E8E8]
         bg-white
         shadow-[0_8px_25px_rgba(0,0,0,.08)]
@@ -29,7 +33,7 @@ export default function CarouselButton({ direction, onClick }: Props) {
         hover:scale-105
       "
     >
-      <Icon size={34} strokeWidth={1.7} />
+      <Icon size={18} strokeWidth={1.7} />
     </button>
   );
 }

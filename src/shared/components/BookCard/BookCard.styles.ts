@@ -1,9 +1,13 @@
 export const CARD = {
-  width: 191,
+  width: 191.08,
 
-  height: 354,
+  height: 353.88,
 
-  imageHeight: 235,
+  imageWidth: 168.15,
 
-  radius: 10,
+  imageHeight: 252.22,
+
+  radius: 12,
+
+  imageRadius: 9.17,
 };

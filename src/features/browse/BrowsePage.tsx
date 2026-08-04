@@ -4,7 +4,6 @@ import HeroBanner from "./components/HeroBanner";
 import GenreSection from "./components/GenreSection";
 import NewArrivalsSection from "./components/NewArrivals/NewArrivalsSection";
 import RecommendationSection from "./components/Recommendation/RecommendationSection";
-import BestSellerSlider from "./components/BestSellers/BestSellersSlider";
 
 export default function BrowsePage() {
   return (
@@ -25,8 +24,6 @@ export default function BrowsePage() {
       <NewArrivalsSection />
 
       <RecommendationSection />
-
-      <BestSellerSlider />
     </Container>
   );
 }

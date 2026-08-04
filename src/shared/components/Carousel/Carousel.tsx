@@ -2,62 +2,35 @@
 
 import useEmblaCarousel from "embla-carousel-react";
 
-import { useCallback } from "react";
-
-import CarouselButton from "./CarouselButton";
+import { forwardRef, useImperativeHandle } from "react";
 
 import { CarouselProps } from "./Carousel.types";
 
-export default function Carousel({
-  children,
+export interface CarouselHandle {
+  scrollPrev: () => void;
+  scrollNext: () => void;
+}
 
-  showPrev = true,
-
-  showNext = true,
-
-  buttonPosition = 0,
-}: CarouselProps) {
+const Carousel = forwardRef<CarouselHandle, CarouselProps>(function Carousel(
+  { children },
+  ref,
+) {
   const [emblaRef, emblaApi] = useEmblaCarousel({
     align: "start",
 
     loop: false,
   });
 
-  const prev = useCallback(() => {
-    emblaApi?.scrollPrev();
-  }, [emblaApi]);
-
-  const next = useCallback(() => {
-    emblaApi?.scrollNext();
-  }, [emblaApi]);
+  useImperativeHandle(ref, () => ({
+    scrollPrev: () => emblaApi?.scrollPrev(),
+    scrollNext: () => emblaApi?.scrollNext(),
+  }));
 
   return (
-    <section className="relative">
-      <div className="overflow-hidden" ref={emblaRef}>
-        <div className="flex gap-[21px]">{children}</div>
-      </div>
-
-      {showPrev && (
-        <div
-          className="absolute top-1/2 -translate-y-1/2"
-          style={{
-            left: -40,
-          }}
-        >
-          <CarouselButton direction="prev" onClick={prev} />
-        </div>
-      )}
-
-      {showNext && (
-        <div
-          className="absolute top-1/2 -translate-y-1/2"
-          style={{
-            left: buttonPosition,
-          }}
-        >
-          <CarouselButton direction="next" onClick={next} />
-        </div>
-      )}
-    </section>
+    <div className="overflow-hidden" ref={emblaRef}>
+      <div className="flex gap-[21.4px]">{children}</div>
+    </div>
   );
-}
+});
+
+export default Carousel;
