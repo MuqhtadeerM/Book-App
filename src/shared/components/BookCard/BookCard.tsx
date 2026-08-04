@@ -1,14 +1,25 @@
 "use client";
 
 import Image from "next/image";
-
 import { Heart } from "lucide-react";
-
 import { motion } from "framer-motion";
 
 import { Button } from "@/shared/ui/button";
 
-import { BookCardProps } from "./BookCard.types";
+export interface BookCardProps {
+  id: number;
+  title: string;
+  author: string;
+  image: string;
+
+  buttonText?: string;
+
+  favourite?: boolean;
+
+  onFavourite?: () => void;
+
+  onAction?: () => void;
+}
 
 export default function BookCard({
   title,
@@ -23,100 +34,77 @@ export default function BookCard({
     <motion.article
       whileHover={{
         y: -6,
+        transition: {
+          duration: 0.25,
+        },
       }}
-      transition={{
-        duration: 0.25,
-      }}
-      className="
-        w-[191px]
-        shrink-0
-      "
+      className="w-[191px] shrink-0"
     >
       {/* Cover */}
 
-      <div
-        className="
-          relative
-          h-[236px]
-          overflow-hidden
-          rounded-[10px]
-          bg-[#ECECEC]
-        "
-      >
-        <Image src={image} alt={title} fill className="object-cover" />
+      <div className="relative overflow-hidden rounded-[12px] bg-[#EFEFEF]">
+        <div className="relative h-[260px] w-full">
+          <Image src={image} alt={title} fill className="object-cover" />
 
-        {/* Favourite */}
+          {/* Wishlist */}
 
-        <button
-          onClick={onFavourite}
-          className="
-            absolute
-            right-2
-            top-2
+          <button
+            onClick={onFavourite}
+            className="
+              absolute
+              right-3
+              top-3
 
-            flex
-            h-8
-            w-8
-            items-center
-            justify-center
+              flex
+              h-9
+              w-9
+              items-center
+              justify-center
 
-            rounded-full
+              rounded-full
+              bg-white
+              shadow-md
+              transition
 
-            bg-white
-
-            shadow-md
-          "
-        >
-          <Heart
-            size={16}
-            className={favourite ? "fill-red-500 text-red-500" : "text-red-500"}
-          />
-        </button>
+              hover:scale-105
+            "
+          >
+            <Heart
+              size={18}
+              className={
+                favourite ? "fill-red-500 text-red-500" : "text-red-500"
+              }
+            />
+          </button>
+        </div>
       </div>
 
-      {/* Title */}
+      {/* Info */}
 
-      <h3
-        className="
-          mt-3
-          line-clamp-2
-          text-[15px]
-          font-medium
-          text-[#262626]
-        "
-      >
-        {title}
-      </h3>
+      <div className="mt-4">
+        <h3 className="line-clamp-2 text-[16px] font-semibold text-[#232323]">
+          {title}
+        </h3>
 
-      {/* Author */}
+        <p className="mt-1 text-[14px] text-[#7A7A7A]">{author}</p>
 
-      <p
-        className="
-          mt-1
-          text-[13px]
-          text-[#2F80ED]
-        "
-      >
-        {author}
-      </p>
+        <Button
+          onClick={onAction}
+          className="
+            mt-4
+            h-[42px]
+            w-full
+            rounded-[8px]
+            bg-[#1F1F1F]
+            text-[14px]
+            font-medium
 
-      {/* Action */}
-
-      <Button
-        onClick={onAction}
-        className="
-          mt-3
-          h-[34px]
-          w-full
-          rounded-[6px]
-          bg-[#1D1D1D]
-          text-[13px]
-          font-medium
-          hover:bg-black
-        "
-      >
-        {buttonText}
-      </Button>
+            hover:bg-black
+          "
+        >
+          {buttonText}
+        </Button>
+      </div>
     </motion.article>
   );
 }
