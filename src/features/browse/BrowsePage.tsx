@@ -26,33 +26,58 @@ export default function BrowsePage() {
         pb-24
       "
     >
-      <HeroBanner />
+      <section id="browse">
+        <HeroBanner />
+      </section>
 
-      <GenreSection />
+      <section id="genres">
+        <GenreSection />
+      </section>
 
-      <NewArrivalsSection />
+      <section id="new-arrivals">
+        <NewArrivalsSection />
+      </section>
 
-      <RecommendationSection />
+      <section id="recommended">
+        <RecommendationSection />
+      </section>
 
-      <BestSellerSection />
+      <section id="best-sellers">
+        <BestSellerSection />
+      </section>
 
-      {/* Speak with author */}
-      <SpeakWithAuthorsSection />
+      <section id="authors">
+        <SpeakWithAuthorsSection />
+      </section>
 
-      <CrimeFictionSection />
+      <section id="crime">
+        <CrimeFictionSection />
+      </section>
 
-      <NonFictionSection />
+      <section id="non-fiction">
+        <NonFictionSection />
+      </section>
 
-      {/* famous authors */}
-      <FamousAuthorsSection />
+      <section id="famous">
+        {/* famous authors */}
+        <FamousAuthorsSection />
+      </section>
 
-      <AcademicsSection />
+      <section id="academics">
+        <AcademicsSection />
+      </section>
 
-      <BusinessSection />
+      <section id="business">
+        <BusinessSection />
+      </section>
 
-      <TechBooksSection />
+      <section id="tech">
+        <TechBooksSection />
+      </section>
 
-      <ClassicsSection />
+      <section id="classic">
+        <ClassicsSection />
+      </section>
     </Container>
   );
 }
