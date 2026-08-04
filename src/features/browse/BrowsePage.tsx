@@ -11,6 +11,7 @@ import AcademicsSection from "./components/Acadamics/Academicssection";
 import BusinessSection from "./components/Business/Businesssection";
 import TechBooksSection from "./components/Technology/Techbookssection";
 import ClassicsSection from "./components/Classics/Classicssection";
+import SpeakWithAuthorsSection from "./components/SpeakWithAuthors/SpeakWithAuthorsSection";
 
 export default function BrowsePage() {
   return (
@@ -35,6 +36,8 @@ export default function BrowsePage() {
       <BestSellerSection />
 
       {/* Speak with author */}
+      <SpeakWithAuthorsSection />
+      
       <CrimeFictionSection />
 
       <NonFictionSection />
