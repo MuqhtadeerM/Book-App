@@ -1,120 +1,94 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { Heart } from "lucide-react";
-import { motion } from "framer-motion";
+import type { Book } from "./types";
 
-import { Button } from "@/shared/ui/button";
-import { CARD } from "./BookCard.styles";
-
-export interface BookCardProps {
-  id: number;
-  title: string;
-  author: string;
-  image: string;
-
-  buttonText?: string;
-
-  favourite?: boolean;
-
-  onFavourite?: () => void;
-
-  onAction?: () => void;
+interface BookCardProps {
+  book: Book;
+  onToggleFavorite?: (bookId: string) => void;
+  onReadChat?: (bookId: string) => void;
 }
 
+// Exact measurements pulled from Figma
+const CARD_WIDTH = 191.0792999267578;
+const CARD_HEIGHT = 353.87884521484375;
+
+const IMAGE_WIDTH = 168.1497802734375;
+const IMAGE_HEIGHT = 249.1674041748047;
+const IMAGE_TOP_OFFSET = 8.41;
+const IMAGE_RADIUS = 6.11;
+
 export default function BookCard({
-  title,
-  author,
-  image,
-  favourite = false,
-  buttonText = "Read & Chat",
-  onFavourite,
-  onAction,
+  book,
+  onToggleFavorite,
+  onReadChat,
 }: BookCardProps) {
   return (
-    <motion.article
-      whileHover={{
-        y: -6,
-        transition: {
-          duration: 0.25,
-        },
-      }}
-      style={{
-        width: CARD.width,
-        height: CARD.height,
-      }}
-      className="shrink-0 rounded-[12px] border-[0.76px] border-[#EDEDED] bg-white p-[11px]"
+    <div
+      className="flex shrink-0 flex-col items-center snap-start"
+      style={{ width: CARD_WIDTH, height: CARD_HEIGHT }}
     >
       {/* Cover */}
-
       <div
+        className="relative overflow-hidden bg-gray-100 shadow-sm"
         style={{
-          width: CARD.imageWidth,
-          height: CARD.imageHeight,
-          borderRadius: CARD.imageRadius,
+          width: IMAGE_WIDTH,
+          height: IMAGE_HEIGHT,
+          marginTop: IMAGE_TOP_OFFSET,
+          borderRadius: IMAGE_RADIUS,
         }}
-        className="relative overflow-hidden bg-[#EFEFEF]"
       >
-        <Image src={image} alt={title} fill className="object-cover" />
-
-        {/* Wishlist */}
+        <Image
+          src={book.coverImageUrl}
+          alt={book.title}
+          fill
+          sizes="169px"
+          className="object-cover"
+        />
 
         <button
-          onClick={onFavourite}
-          className="
-            absolute
-            right-3
-            top-3
-
-            flex
-            h-9
-            w-9
-            items-center
-            justify-center
-
-            rounded-full
-            bg-white
-            shadow-md
-            transition
-
-            hover:scale-105
-          "
+          type="button"
+          aria-label={
+            book.isFavorited ? "Remove from favorites" : "Add to favorites"
+          }
+          onClick={() => onToggleFavorite?.(book.id)}
+          className="absolute right-2 top-2 flex h-8 w-8 items-center justify-center rounded-full bg-white/90 shadow transition hover:bg-white"
         >
           <Heart
-            size={18}
-            className={favourite ? "fill-red-500 text-red-500" : "text-red-500"}
+            className="h-4 w-4"
+            fill={book.isFavorited ? "#ef4444" : "none"}
+            stroke={book.isFavorited ? "#ef4444" : "#111827"}
           />
         </button>
       </div>
 
-      {/* Info */}
-
-      <div className="mt-3" style={{ width: CARD.imageWidth }}>
-        <h3 className="line-clamp-2 text-[14px] font-semibold leading-tight text-[#232323]">
-          {title}
-        </h3>
-
-        <p className="mt-1 truncate text-[13px] text-[#7A7A7A]">{author}</p>
-
-        <Button
-          onClick={onAction}
-          style={{ width: CARD.imageWidth }}
-          className="
-            mt-3
-            h-[30.57px]
-            rounded-[8px]
-            bg-[#1F1F1F]
-            px-[18.34px]
-            py-[7.64px]
-            text-[13px]
-            font-medium
-
-            hover:bg-black
-          "
-        >
-          {buttonText}
-        </Button>
+      {/* Meta */}
+      <div className="mt-3 flex flex-col gap-1" style={{ width: CARD_WIDTH }}>
+        <p className="line-clamp-2 text-sm font-medium text-gray-900">
+          {book.title}
+        </p>
+        {book.authorHref ? (
+          <Link
+            href={book.authorHref}
+            className="text-sm text-blue-600 hover:underline"
+          >
+            {book.author}
+          </Link>
+        ) : (
+          <span className="text-sm text-blue-600">{book.author}</span>
+        )}
       </div>
-    </motion.article>
+
+      <button
+        type="button"
+        onClick={() => onReadChat?.(book.id)}
+        style={{ width: CARD_WIDTH }}
+        className="mt-2 rounded-lg bg-gray-900 py-2 text-sm font-medium text-white transition hover:bg-gray-800"
+      >
+        Read &amp; Chat
+      </button>
+    </div>
   );
 }

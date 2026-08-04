@@ -4,6 +4,9 @@ import HeroBanner from "./components/HeroBanner";
 import GenreSection from "./components/GenreSection";
 import NewArrivalsSection from "./components/NewArrivals/NewArrivalsSection";
 import RecommendationSection from "./components/Recommendation/RecommendationSection";
+import BestSellerSection from "./components/BestSellers/BestSellersSection";
+import CrimeFictionSection from "./components/Crime/Crimefictionsection";
+import NonFictionSection from "./components/NonFiction/Nonfictionsection";
 
 export default function BrowsePage() {
   return (
@@ -13,7 +16,7 @@ export default function BrowsePage() {
         w-full
         max-w-[2097px]
         flex-col
-        gap-[56px]
+        gap-[36px]
         pb-24
       "
     >
@@ -24,6 +27,12 @@ export default function BrowsePage() {
       <NewArrivalsSection />
 
       <RecommendationSection />
+
+      <BestSellerSection />
+
+      <CrimeFictionSection />
+
+      <NonFictionSection />
     </Container>
   );
 }
