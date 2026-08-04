@@ -18,7 +18,7 @@ export default function GenreSection() {
         Dive into Different Genres
       </h2>
 
-      <div className="mt-6 flex justify-between">
+      <div className="mt-10 flex justify-between">
         {genres.map((genre, index) => (
           <motion.button
             key={genre.id}

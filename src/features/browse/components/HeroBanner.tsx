@@ -40,7 +40,7 @@ export default function HeroBanner() {
         width={252}
         height={258}
         priority
-        className="absolute right-[10px] top-[10px] h-[58px] w-[340px] object-contain select-none pointer-events-none"
+        className="absolute right-[10px] top-[8px] h-[58px] w-[340px] object-contain select-none pointer-events-none"
       />
 
       {/* Book */}

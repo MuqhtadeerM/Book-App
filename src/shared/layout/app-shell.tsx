@@ -9,7 +9,7 @@ interface AppShellProps {
 
 export function AppShell({ children }: AppShellProps) {
   return (
-    <div className="min-h-screen bg-[#FFFDF6] overflow-x-hidden">
+    <div className="min-h-screen bg-[#FFFDF3] overflow-x-hidden">
       <div className="flex items-start gap-[35px] px-[40px] pt-[30px]">
         {/* Sidebar */}
         <Sidebar />
