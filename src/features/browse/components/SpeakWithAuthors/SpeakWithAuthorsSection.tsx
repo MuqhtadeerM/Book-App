@@ -1,4 +1,3 @@
-// src/features/browse/components/SpeakWithAuthors/SpeakWithAuthorsSection.tsx
 "use client";
 
 import {

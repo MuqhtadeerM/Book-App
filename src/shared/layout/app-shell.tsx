@@ -22,7 +22,9 @@ export function AppShell({ children }: AppShellProps) {
           <div className="mt-[20px]">{children}</div>
         </main>
       </div>
-      <Footer />
+      <div className="mt-[-100px]">
+        <Footer />
+      </div>
     </div>
   );
 }

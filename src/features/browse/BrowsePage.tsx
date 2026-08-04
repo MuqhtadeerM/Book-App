@@ -12,6 +12,7 @@ import BusinessSection from "./components/Business/Businesssection";
 import TechBooksSection from "./components/Technology/Techbookssection";
 import ClassicsSection from "./components/Classics/Classicssection";
 import SpeakWithAuthorsSection from "./components/SpeakWithAuthors/SpeakWithAuthorsSection";
+import FamousAuthorsSection from "./components/FamousAuthors/FamousAuthorsSection";
 
 export default function BrowsePage() {
   return (
@@ -37,12 +38,13 @@ export default function BrowsePage() {
 
       {/* Speak with author */}
       <SpeakWithAuthorsSection />
-      
+
       <CrimeFictionSection />
 
       <NonFictionSection />
 
       {/* famous authors */}
+      <FamousAuthorsSection />
 
       <AcademicsSection />
 
