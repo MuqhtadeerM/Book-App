@@ -9,6 +9,8 @@ import CrimeFictionSection from "./components/Crime/Crimefictionsection";
 import NonFictionSection from "./components/NonFiction/Nonfictionsection";
 import AcademicsSection from "./components/Acadamics/Academicssection";
 import BusinessSection from "./components/Business/Businesssection";
+import TechBooksSection from "./components/Technology/Techbookssection";
+import ClassicsSection from "./components/Classics/Classicssection";
 
 export default function BrowsePage() {
   return (
@@ -42,6 +44,10 @@ export default function BrowsePage() {
       <AcademicsSection />
 
       <BusinessSection />
+
+      <TechBooksSection />
+
+      <ClassicsSection />
     </Container>
   );
 }
