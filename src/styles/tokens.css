@@ -1,63 +1,62 @@
 :root {
-  /* ---------- Colors ---------- */
+  /* ===========================
+     Colors
+  =========================== */
 
-  --background: 40 100% 98%;
-  --foreground: 222 20% 16%;
+  --background: 44 100% 98%;
+  --foreground: 232 17% 18%;
 
-  --card: 0 0% 100%;
-  --card-foreground: 222 20% 16%;
-
-  --popover: 0 0% 100%;
-  --popover-foreground: 222 20% 16%;
-
-  --primary: 208 100% 56%;
+  --primary: 217 96% 56%;
   --primary-foreground: 0 0% 100%;
 
-  --secondary: 40 40% 96%;
-  --secondary-foreground: 222 20% 16%;
+  --secondary: 42 100% 96%;
+  --secondary-foreground: 232 18% 18%;
 
-  --muted: 220 20% 96%;
-  --muted-foreground: 220 8% 45%;
+  --muted: 42 40% 95%;
+  --muted-foreground: 220 8% 48%;
 
-  --accent: 210 40% 96%;
-  --accent-foreground: 222 20% 16%;
+  --border: 40 35% 90%;
+  --input: 40 35% 90%;
+  --ring: 217 96% 56%;
 
-  --destructive: 0 84% 60%;
-  --destructive-foreground: 0 0% 100%;
+  --card: 0 0% 100%;
+  --card-foreground: 232 17% 18%;
 
-  --border: 220 13% 91%;
-  --input: 220 13% 91%;
-  --ring: 208 100% 56%;
+  /* ===========================
+     Radius
+  =========================== */
 
-  /* ---------- Radius ---------- */
+  --radius-sm: 10px;
+  --radius-md: 16px;
+  --radius-lg: 20px;
+  --radius-xl: 28px;
 
-  --radius: 1rem;
+  /* ===========================
+     Shadows
+  =========================== */
 
-  /* ---------- Sidebar ---------- */
+  --shadow-sm: 0px 1px 3px rgba(0, 0, 0, 0.04);
+
+  --shadow-md: 0px 8px 20px rgba(0, 0, 0, 0.05);
+
+  --shadow-lg: 0px 16px 40px rgba(0, 0, 0, 0.08);
+
+  /* ===========================
+     Sidebar
+  =========================== */
 
   --sidebar-width: 256px;
+  --sidebar-height: 538px;
 
-  /* ---------- Header ---------- */
+  /* ===========================
+     Topbar
+  =========================== */
 
-  --topbar-height: 76px;
+  --topbar-height: 78px;
 
-  /* ---------- Container ---------- */
+  /* ===========================
+     Container
+  =========================== */
 
-  --page-max-width: 1366px;
-
-  /* ---------- Shadows ---------- */
-
-  --shadow-sm: 0 2px 10px rgba(0, 0, 0, 0.05);
-
-  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.08);
-
-  --shadow-lg: 0 16px 40px rgba(0, 0, 0, 0.1);
-
-  /* ---------- Animation ---------- */
-
-  --duration-fast: 150ms;
-
-  --duration-normal: 250ms;
-
-  --duration-slow: 400ms;
+  --container: 1366px;
 }
