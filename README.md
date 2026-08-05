@@ -1,160 +1,376 @@
-# Book App
+# 📚 Chai Reader
 
-A Next.js (App Router) + TypeScript book discovery app with browsable
-categories (Best Sellers, Crime Fiction, Non Fiction, Academics, Business,
-Tech Books, Classics), author spotlights, and a book detail/reader page.
+<div align="center">
 
-## Tech Stack
+<img src="./public/images/logo.png" alt="Chai Reader" width="220"/>
 
-- **Framework:** Next.js (App Router)
-- **Language:** TypeScript
-- **Styling:** Tailwind CSS
-- **Icons:** [lucide-react](https://lucide.dev/)
+### AI-Powered Book Discovery & Reading Platform
 
-## Getting Started
+Discover books, explore authors, browse collections, manage your wishlist, and experience a modern digital bookstore built with the latest web technologies.
+
+![Next.js](https://img.shields.io/badge/Next.js-16-black?logo=next.js)
+![React](https://img.shields.io/badge/React-19-61DAFB?logo=react)
+![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?logo=typescript)
+![Redux Toolkit](https://img.shields.io/badge/Redux%20Toolkit-764ABC?logo=redux)
+![TailwindCSS](https://img.shields.io/badge/TailwindCSS-v4-38BDF8?logo=tailwindcss)
+![TanStack Query](https://img.shields.io/badge/TanStack%20Query-FF4154?logo=react-query)
+![Framer Motion](https://img.shields.io/badge/Framer%20Motion-000000?logo=framer)
+![MIT License](https://img.shields.io/badge/License-MIT-success)
+
+</div>
+
+---
+
+# 📖 About
+
+**Chai Reader** is a modern AI-powered online bookstore and reading platform that provides a clean, responsive, and immersive experience for discovering books across multiple genres.
+
+The project is built using **Next.js App Router**, **React 19**, **TypeScript**, **Redux Toolkit**, **Tailwind CSS v4**, and follows a scalable feature-based architecture.
+
+---
+
+# ✨ Features
+
+## 📚 Book Discovery
+
+- Hero Banner
+- Browse Books
+- Genre Explorer
+- New Arrivals
+- Personalized Recommendations
+- Best Sellers
+- Crime Fiction
+- Non Fiction
+- Academics
+- Business Books
+- Technology Books
+- Classics
+- Famous Authors
+- Speak With Authors
+
+---
+
+## ❤️ User Features
+
+- Wishlist
+- Shopping Cart
+- Search Books
+- Responsive Navigation
+- Smooth Section Navigation
+- Beautiful Animations
+- Responsive Layout
+
+---
+
+## 🎨 UI Features
+
+- Modern Dashboard Layout
+- Sticky Header
+- Sidebar Navigation
+- Reusable Components
+- Responsive Grid
+- Carousel Components
+- Animated Cards
+- Glassmorphism Effects
+- Clean Typography
+
+---
+
+# 🛠 Tech Stack
+
+| Category | Technology |
+|-----------|------------|
+| Framework | Next.js 16 |
+| UI Library | React 19 |
+| Language | TypeScript |
+| Styling | Tailwind CSS v4 |
+| State Management | Redux Toolkit |
+| Data Fetching | TanStack Query |
+| Animation | Framer Motion |
+| Icons | Lucide React |
+| Routing | App Router |
+| Package Manager | npm |
+
+---
+
+# 📂 Project Structure
+
+```text
+src
+│
+├── app
+│   ├── (main)
+│   ├── api
+│   ├── layout.tsx
+│   └── page.tsx
+│
+├── features
+│   ├── browse
+│   │
+│   ├── api
+│   ├── components
+│   │   ├── HeroBanner
+│   │   ├── GenreSection
+│   │   ├── NewArrivals
+│   │   ├── Recommendation
+│   │   ├── BestSellers
+│   │   ├── Crime
+│   │   ├── NonFiction
+│   │   ├── Business
+│   │   ├── Technology
+│   │   ├── Academics
+│   │   ├── Classics
+│   │   ├── FamousAuthors
+│   │   └── SpeakWithAuthors
+│   │
+│   ├── hooks
+│   └── types
+│
+├── shared
+│   ├── components
+│   ├── config
+│   ├── footer
+│   ├── header
+│   ├── layout
+│   ├── providers
+│   ├── lib
+│   ├── types
+│   └── ui
+│
+├── store
+│   ├── auth
+│   ├── cart
+│   ├── wishlist
+│   ├── search
+│   └── ui
+│
+└── styles
+```
+
+---
+
+# 🚀 Installation
+
+Clone the repository
+
+```bash
+git clone https://github.com/yourusername/chai-reader.git
+```
+
+Navigate into the project
+
+```bash
+cd chai-reader
+```
+
+Install dependencies
 
 ```bash
 npm install
+```
+
+Start the development server
+
+```bash
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000).
-
-> **Next.js version note:** dynamic route `params` are typed as a `Promise`
-> in this project (Next.js 15+ convention — `const { bookId } = await params`).
-> If you're on Next.js 14 or earlier, `params` is a plain object instead and
-> the `await` will need to be removed in `src/app/(main)/browse/[bookId]/page.tsx`.
-
-## Project Structure
+Visit
 
 ```
-src/
-  app/
-    (main)/
-      browse/
-        page.tsx              # category listing page (sidebar layout)
-        [bookId]/
-          page.tsx             # book detail page (dynamic route)
-  shared/
-    components/
-      BookCard/                # reusable book cover card + horizontal carousel
-        BookCard.tsx
-        BookCarousel.tsx
-        types.ts
-        index.ts
-      AuthorCard/               # "Speak with Authors" — author + book pairing card
-        AuthorCard.tsx
-        AuthorCarousel.tsx
-        types.ts
-        index.ts
-      FamousAuthorCard/         # "Famous Authors" — square photo + name overlay
-        FamousAuthorCard.tsx
-        FamousAuthorsCarousel.tsx
-        types.ts
-        index.ts
-      CarouselShell/            # shared header + arrow-scroll shell used by
-        CarouselShell.tsx       # BookCarousel, AuthorCarousel, FamousAuthorsCarousel
-        index.ts
-  features/
-    browse/
-      components/
-        BestSellers/BestSellersSection.tsx
-        CrimeFiction/CrimeFictionSection.tsx
-        NonFiction/NonFictionSection.tsx
-        Academics/AcademicsSection.tsx
-        Business/BusinessSection.tsx
-        TechBooks/TechBooksSection.tsx
-        Classics/ClassicsSection.tsx
-        SpeakWithAuthors/SpeakWithAuthorsSection.tsx
-        FamousAuthors/FamousAuthorsSection.tsx
-        BookDetail/
-          BookDetailView.tsx     # detail page content (About, Reviews, etc.)
-          getBookById.ts         # mock data fetch — replace with real API/DB call
-          types.ts
+http://localhost:3000
 ```
 
-## Shared Components
+---
 
-### `BookCard` / `BookCarousel`
-The core reusable unit for every category row (Best Sellers, Crime Fiction,
-Non Fiction, Academics, Business, Tech Books, Classics). A `BookCarousel`
-takes a `title`, optional `subtitle`, and a `books` array, and renders a
-horizontally scrollable row of `BookCard`s with left/right arrow controls.
+# 📁 Important Directories
 
-```tsx
-import { BookCarousel, type Book } from "@/shared/components/BookCard";
+```
+public/
 
-const books: Book[] = [
-  { id: "1", title: "...", author: "...", coverImageUrl: "/covers/1.png" },
-];
-
-<BookCarousel title="Best Sellers" subtitle="Trending books" books={books} />
+images/
+│
+├── hero/
+├── genres/
+├── authors/
+├── recommended/
+├── footer/
+├── covers/
+└── logo/
 ```
 
-Clicking a card's cover/title navigates to `/browse/{book.id}` (the book
-detail page). The heart icon toggles favorite via `onToggleFavorite`, and
-"Read & Chat" calls `onReadChat` if provided, otherwise it also navigates to
-the detail page.
+---
 
-If a `coverImageUrl` 404s or is missing, the card falls back to a placeholder
-icon + title instead of a broken image.
+# 🎯 Sections
 
-### `AuthorCard` / `AuthorCarousel`
-Used for "Speak with Authors" — pairs an author portrait with a book cover
-side by side, plus a "Chat with Me" CTA.
+- Hero Banner
+- Genres
+- New Arrivals
+- Recommended For You
+- Best Sellers
+- Speak With Authors
+- Crime Fiction
+- Non Fiction
+- Famous Authors
+- Academics
+- Business
+- Technology
+- Classics
+- Footer
 
-### `FamousAuthorCard` / `FamousAuthorsCarousel`
-Used for "Famous Authors" — a simple square photo grid with the author's name
-overlaid at the bottom.
+---
 
-### `CarouselShell`
-Internal shell (title + subtitle + left/right scroll arrows + scrollable row)
-shared by all three carousel components above, so new card types only need to
-build the card itself, not the scrolling/header behavior.
+# ⚙️ State Management
 
-## Adding a New Category Section
+Redux Toolkit manages
 
-1. Create `src/features/browse/components/<Category>/<Category>Section.tsx`.
-2. Import `BookCarousel` and a `books: Book[]` array (hardcoded for now, or
-   fetched from an API).
-3. Render `<BookCarousel title="..." subtitle="..." books={books} />`.
-4. Add `<CategorySection />` to `BrowsePage.tsx`.
+- Authentication
+- Wishlist
+- Cart
+- Search
+- Sidebar UI
 
-> Once there are many categories, consider replacing per-category files with
-> a single data-driven `CategorySection` that fetches books by category slug
-> from an API — happy to build that refactor when ready.
+---
 
-## Book Detail Page
+# 🎨 Design Principles
 
-Route: `src/app/(main)/browse/[bookId]/page.tsx`
+- Feature-based architecture
+- Reusable UI Components
+- Scalable Folder Structure
+- Mobile First
+- Accessible UI
+- Clean Component Separation
 
-Renders inside the existing `(main)` layout (sidebar included automatically).
-Fetches data via `getBookById(bookId)` — currently a **mock** that always
-returns sample data; replace its implementation with a real API/DB call.
-Includes: breadcrumb, cover with Read/Chat Now actions, tags, About the Book
-(expandable), Product Details, About the Author (expandable bio), Reviews,
-and a "You might also like" row (reuses `BookCarousel`).
+---
 
-## Images
+# 📦 Reusable Components
 
-Static covers/author photos go in `public/` (e.g. `public/covers/`,
-`public/authors/`) and are referenced as `/covers/filename.png`. For
-externally hosted images, whitelist the domain in `next.config.ts`:
+- Container
+- Header
+- Sidebar
+- Footer
+- Book Card
+- Author Card
+- Famous Author Card
+- Carousel
+- Recommendation Card
+- Buttons
+- Inputs
+- Avatar
+- Dialog
+- Tooltip
+- Skeleton
+- Sheet
 
-```ts
-const nextConfig = {
-  images: {
-    remotePatterns: [{ protocol: "https", hostname: "your-image-host.com" }],
-  },
-};
+---
+
+# 📱 Responsive
+
+Designed for
+
+- Desktop
+- Laptop
+- Tablet
+- Mobile
+
+---
+
+# 🚀 Performance Optimizations
+
+- Server Components
+- App Router
+- Image Optimization
+- Lazy Loading
+- Code Splitting
+- Dynamic Imports
+- Optimized Rendering
+
+---
+
+# 🔜 Upcoming Features
+
+- User Authentication
+- AI Book Chat
+- Voice Search
+- Book Preview
+- Reading History
+- Reviews & Ratings
+- Order Management
+- Payment Integration
+- Notifications
+- User Profile
+- Admin Dashboard
+- CMS Integration
+- Dark Mode
+- Multi-language Support
+
+---
+
+# 📸 Preview
+
+| Home | Browse | Recommendations |
+|------|---------|-----------------|
+| ✅ | ✅ | ✅ |
+
+| Authors | Genres | Best Sellers |
+|----------|----------|--------------|
+| ✅ | ✅ | ✅ |
+
+---
+
+# 🤝 Contributing
+
+Contributions are always welcome.
+
+1. Fork the repository
+
+2. Create a new branch
+
+```bash
+git checkout -b feature/new-feature
 ```
 
-Missing/broken images degrade gracefully to a placeholder instead of
-breaking the layout.
+3. Commit changes
 
-## Known Follow-ups
+```bash
+git commit -m "Added new feature"
+```
 
-- [ ] Replace hardcoded `books` arrays in each `*Section.tsx` with real API data.
-- [ ] Replace `getBookById` mock with a real API/DB lookup.
-- [ ] Add real cover/author image assets to `public/`.
-- [ ] Confirm `params` handling matches your installed Next.js version.
+4. Push
+
+```bash
+git push origin feature/new-feature
+```
+
+5. Create a Pull Request
+
+---
+
+# 📄 License
+
+Distributed under the **MIT License**.
+
+---
+
+# 👨‍💻 Developer
+
+**Muhammed Muqhtadeer M**
+
+Frontend Developer
+
+- React
+- Next.js
+- TypeScript
+- Redux Toolkit
+- Tailwind CSS
+- Node.js
+
+---
+
+<div align="center">
+
+### ⭐ If you like this project, consider giving it a Star!
+
+Made with ❤️ using **Next.js**, **React**, and **TypeScript**
+
+</div>
