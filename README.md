@@ -1,181 +1,71 @@
 # 📚 Chai Reader
 
-<div align="center">
-
-<img src="./public/images/logo.png" alt="Chai Reader" width="220"/>
-
-### AI-Powered Book Discovery & Reading Platform
-
-Discover books, explore authors, browse collections, manage your wishlist, and experience a modern digital bookstore built with the latest web technologies.
-
-![Next.js](https://img.shields.io/badge/Next.js-16-black?logo=next.js)
-![React](https://img.shields.io/badge/React-19-61DAFB?logo=react)
-![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?logo=typescript)
-![Redux Toolkit](https://img.shields.io/badge/Redux%20Toolkit-764ABC?logo=redux)
-![TailwindCSS](https://img.shields.io/badge/TailwindCSS-v4-38BDF8?logo=tailwindcss)
-![TanStack Query](https://img.shields.io/badge/TanStack%20Query-FF4154?logo=react-query)
-![Framer Motion](https://img.shields.io/badge/Framer%20Motion-000000?logo=framer)
-![MIT License](https://img.shields.io/badge/License-MIT-success)
-
-</div>
+A modern AI-powered online bookstore built with **Next.js 16**, **React 19**, **TypeScript**, **Redux Toolkit**, and **Tailwind CSS**. The application provides a clean and responsive interface for discovering books across multiple categories with reusable UI components and a scalable architecture.
 
 ---
 
-# 📖 About
+# Tech Stack
 
-**Chai Reader** is a modern AI-powered online bookstore and reading platform that provides a clean, responsive, and immersive experience for discovering books across multiple genres.
-
-The project is built using **Next.js App Router**, **React 19**, **TypeScript**, **Redux Toolkit**, **Tailwind CSS v4**, and follows a scalable feature-based architecture.
-
----
-
-# ✨ Features
-
-## 📚 Book Discovery
-
-- Hero Banner
-- Browse Books
-- Genre Explorer
-- New Arrivals
-- Personalized Recommendations
-- Best Sellers
-- Crime Fiction
-- Non Fiction
-- Academics
-- Business Books
-- Technology Books
-- Classics
-- Famous Authors
-- Speak With Authors
+- Next.js 16 (App Router)
+- React 19
+- TypeScript
+- Tailwind CSS v4
+- Redux Toolkit
+- React Redux
+- TanStack Query
+- Framer Motion
+- Lucide React
 
 ---
 
-## ❤️ User Features
+# Project Structure
 
-- Wishlist
-- Shopping Cart
-- Search Books
-- Responsive Navigation
-- Smooth Section Navigation
-- Beautiful Animations
-- Responsive Layout
-
----
-
-## 🎨 UI Features
-
-- Modern Dashboard Layout
-- Sticky Header
-- Sidebar Navigation
-- Reusable Components
-- Responsive Grid
-- Carousel Components
-- Animated Cards
-- Glassmorphism Effects
-- Clean Typography
-
----
-
-# 🛠 Tech Stack
-
-| Category | Technology |
-|-----------|------------|
-| Framework | Next.js 16 |
-| UI Library | React 19 |
-| Language | TypeScript |
-| Styling | Tailwind CSS v4 |
-| State Management | Redux Toolkit |
-| Data Fetching | TanStack Query |
-| Animation | Framer Motion |
-| Icons | Lucide React |
-| Routing | App Router |
-| Package Manager | npm |
-
----
-
-# 📂 Project Structure
-
-```text
-src
-│
-├── app
-│   ├── (main)
-│   ├── api
-│   ├── layout.tsx
-│   └── page.tsx
-│
-├── features
-│   ├── browse
-│   │
-│   ├── api
-│   ├── components
-│   │   ├── HeroBanner
-│   │   ├── GenreSection
-│   │   ├── NewArrivals
-│   │   ├── Recommendation
-│   │   ├── BestSellers
-│   │   ├── Crime
-│   │   ├── NonFiction
-│   │   ├── Business
-│   │   ├── Technology
-│   │   ├── Academics
-│   │   ├── Classics
-│   │   ├── FamousAuthors
-│   │   └── SpeakWithAuthors
-│   │
-│   ├── hooks
-│   └── types
-│
-├── shared
-│   ├── components
-│   ├── config
-│   ├── footer
-│   ├── header
-│   ├── layout
-│   ├── providers
-│   ├── lib
-│   ├── types
-│   └── ui
-│
-├── store
-│   ├── auth
-│   ├── cart
-│   ├── wishlist
-│   ├── search
-│   └── ui
-│
-└── styles
+```
+src/
+├── app/
+├── features/
+│   └── browse/
+├── shared/
+│   ├── components/
+│   ├── layout/
+│   ├── ui/
+│   ├── header/
+│   └── footer/
+├── store/
+└── styles/
 ```
 
+The project follows a **feature-based architecture** where each feature owns its UI, hooks, and related logic.
+
 ---
 
-# 🚀 Installation
+# Setup Instructions
 
-Clone the repository
+## 1. Clone the repository
 
 ```bash
-git clone https://github.com/yourusername/chai-reader.git
+git clone <repository-url>
 ```
 
-Navigate into the project
+## 2. Navigate to the project
 
 ```bash
-cd chai-reader
+cd book-app
 ```
 
-Install dependencies
+## 3. Install dependencies
 
 ```bash
 npm install
 ```
 
-Start the development server
+## 4. Start the development server
 
 ```bash
 npm run dev
 ```
 
-Visit
+## 5. Open the application
 
 ```
 http://localhost:3000
@@ -183,194 +73,137 @@ http://localhost:3000
 
 ---
 
-# 📁 Important Directories
+# How to Run the Project
 
+Development
+
+```bash
+npm run dev
 ```
-public/
 
-images/
-│
-├── hero/
-├── genres/
-├── authors/
-├── recommended/
-├── footer/
-├── covers/
-└── logo/
+Production Build
+
+```bash
+npm run build
+```
+
+Start Production Server
+
+```bash
+npm start
+```
+
+Lint
+
+```bash
+npm run lint
 ```
 
 ---
 
-# 🎯 Sections
+# Features
 
+- Browse Books
 - Hero Banner
-- Genres
+- Genre Explorer
 - New Arrivals
-- Recommended For You
+- Recommendations
 - Best Sellers
-- Speak With Authors
 - Crime Fiction
 - Non Fiction
-- Famous Authors
 - Academics
 - Business
 - Technology
 - Classics
-- Footer
-
----
-
-# ⚙️ State Management
-
-Redux Toolkit manages
-
-- Authentication
+- Famous Authors
+- Speak With Authors
 - Wishlist
-- Cart
+- Shopping Cart
 - Search
-- Sidebar UI
+- Responsive Layout
+- Smooth Animations
 
 ---
 
-# 🎨 Design Principles
+# Assumptions Made
 
-- Feature-based architecture
-- Reusable UI Components
-- Scalable Folder Structure
-- Mobile First
-- Accessible UI
-- Clean Component Separation
-
----
-
-# 📦 Reusable Components
-
-- Container
-- Header
-- Sidebar
-- Footer
-- Book Card
-- Author Card
-- Famous Author Card
-- Carousel
-- Recommendation Card
-- Buttons
-- Inputs
-- Avatar
-- Dialog
-- Tooltip
-- Skeleton
-- Sheet
+- The UI is based entirely on the provided Figma design.
+- Authentication and backend APIs are outside the scope of this implementation.
+- Static JSON/mock data is used until APIs become available.
+- Images are expected to be placed under the `public/` directory.
+- Navigation within the Browse page uses smooth scrolling to section IDs.
+- The application is optimized primarily for desktop, with responsive support for smaller screens.
 
 ---
 
-# 📱 Responsive
+# Libraries Used
 
-Designed for
-
-- Desktop
-- Laptop
-- Tablet
-- Mobile
-
----
-
-# 🚀 Performance Optimizations
-
-- Server Components
-- App Router
-- Image Optimization
-- Lazy Loading
-- Code Splitting
-- Dynamic Imports
-- Optimized Rendering
+| Library | Purpose |
+|----------|---------|
+| Next.js | Framework |
+| React | UI Library |
+| TypeScript | Type Safety |
+| Tailwind CSS | Styling |
+| Redux Toolkit | State Management |
+| React Redux | Redux Bindings |
+| TanStack Query | Server State Management |
+| Framer Motion | Animations |
+| Lucide React | Icons |
 
 ---
 
-# 🔜 Upcoming Features
+# Trade-offs
 
-- User Authentication
-- AI Book Chat
-- Voice Search
-- Book Preview
-- Reading History
+- Static data is currently used instead of live API integration to focus on the UI implementation.
+- Some repeated UI patterns could be further abstracted into configurable components as the application grows.
+- Carousels are currently lightweight and can be enhanced with dedicated slider libraries if advanced interactions are required.
+- Images are loaded from the local `public` directory instead of a CDN.
+
+---
+
+# Improvements with More Time
+
+- Integrate backend APIs for books, authors, and recommendations.
+- Add authentication and user profiles.
+- Implement real wishlist and cart persistence.
+- Add pagination and infinite scrolling.
+- Improve accessibility (ARIA labels, keyboard navigation, screen reader support).
+- Add unit and integration tests using Jest and React Testing Library.
+- Implement end-to-end testing with Playwright.
+- Optimize performance with route-level code splitting and image optimization.
+- Add dark mode support.
+- Add localization and multi-language support.
+- Implement AI-powered book recommendations and semantic search.
+- Improve carousel interactions with touch gestures and keyboard controls.
+- Add skeleton loaders, error boundaries, and offline support.
+
+---
+
+# Design Decisions
+
+- Feature-based folder structure for scalability.
+- Reusable shared UI components.
+- Redux Toolkit for global client state.
+- TanStack Query reserved for server state.
+- Tailwind CSS utility-first styling.
+- Framer Motion used for lightweight animations.
+- Component composition prioritized over deeply nested inheritance.
+
+---
+
+# Future Scope
+
+- Book Details
 - Reviews & Ratings
-- Order Management
-- Payment Integration
-- Notifications
-- User Profile
+- Checkout & Payments
+- Order Tracking
+- Reading History
+- AI Chat with Books
 - Admin Dashboard
 - CMS Integration
-- Dark Mode
-- Multi-language Support
 
 ---
 
-# 📸 Preview
+# License
 
-| Home | Browse | Recommendations |
-|------|---------|-----------------|
-| ✅ | ✅ | ✅ |
-
-| Authors | Genres | Best Sellers |
-|----------|----------|--------------|
-| ✅ | ✅ | ✅ |
-
----
-
-# 🤝 Contributing
-
-Contributions are always welcome.
-
-1. Fork the repository
-
-2. Create a new branch
-
-```bash
-git checkout -b feature/new-feature
-```
-
-3. Commit changes
-
-```bash
-git commit -m "Added new feature"
-```
-
-4. Push
-
-```bash
-git push origin feature/new-feature
-```
-
-5. Create a Pull Request
-
----
-
-# 📄 License
-
-Distributed under the **MIT License**.
-
----
-
-# 👨‍💻 Developer
-
-**Muhammed Muqhtadeer M**
-
-Frontend Developer
-
-- React
-- Next.js
-- TypeScript
-- Redux Toolkit
-- Tailwind CSS
-- Node.js
-
----
-
-<div align="center">
-
-### ⭐ If you like this project, consider giving it a Star!
-
-Made with ❤️ using **Next.js**, **React**, and **TypeScript**
-
-</div>
+This project is intended for educational and assessment purposes.
